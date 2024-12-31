@@ -1,0 +1,15 @@
+<div class="w-full h-96 bg-[#161A31] border-2 border-gray-400 rounded-xl group overflow-hidden relative" appFadeIn>
+  <!-- Imagen de fondo -->
+  <img
+    class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-300"
+    src="{{ cover_image }}"
+    alt="{{ title }}"
+  />
+  <!-- Texto superpuesto -->
+  <div
+    class="absolute inset-0 flex flex-col justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300"
+  >
+    <h3 class="text-3xl font-semibold text-white">{{ title }}</h3>
+    <p class="text-lg text-gray-300 mt-4">{{ description }}</p>
+  </div>
+</div>
