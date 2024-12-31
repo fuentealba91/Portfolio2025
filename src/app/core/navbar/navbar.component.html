@@ -1,0 +1,25 @@
+<nav class="fixed left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-20 border-[1px] border-gray-400 bg-[#161A31] rounded-xl p-4 backdrop-blur-sm z-10">
+    <ul class="flex space-x-8 justify-center text-white">
+        <li class="menu-link" [class.active]="activeSection === 'home'">
+            <a (click)="scrollToSection('home')" class="cursor-pointer">Inicio</a>
+        </li>
+        <li class="menu-link" [class.active]="activeSection === 'about'">
+            <a (click)="scrollToSection('about')" class="cursor-pointer">Sobre mí</a>
+        </li>
+        <li class="menu-link" [class.active]="activeSection === 'projects'">
+            <a (click)="scrollToSection('projects')" class="cursor-pointer">Proyectos</a>
+        </li>
+        <li class="menu-link" [class.active]="activeSection === 'skills'">
+            <a (click)="scrollToSection('skills')" class="cursor-pointer">Habilidades</a>
+        </li>
+        <li class="menu-link" [class.active]="activeSection === 'experience'">
+            <a (click)="scrollToSection('experience')" class="cursor-pointer">Experiencia</a>
+        </li>
+        <li class="menu-link" [class.active]="activeSection === 'education'">
+            <a (click)="scrollToSection('education')" class="cursor-pointer">Educación</a>
+        </li>
+        <li class="menu-link" [class.active]="activeSection === 'contact'">
+            <a (click)="scrollToSection('contact')" class="cursor-pointer">Contacto</a>
+        </li>
+    </ul>
+</nav>
