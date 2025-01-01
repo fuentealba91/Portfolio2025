@@ -1,38 +1,56 @@
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
-  activeSection: string = 'home'; // Inicializa con la sección por defecto
+  activeSection: string = 'inicio';
+  isMenuOpen: boolean = false;
+  isScrolled: boolean = false;
 
   constructor(private viewportScroller: ViewportScroller) {}
 
   scrollToSection(sectionId: string): void {
     this.viewportScroller.scrollToAnchor(sectionId);
+    this.activeSection = sectionId; // Actualiza la sección activa
   }
 
-  // Detecta la sección activa al hacer scroll
   @HostListener('window:scroll', [])
   onScroll(): void {
-    const sections = document.querySelectorAll('section'); // Selecciona todas las secciones
+    const sections = document.querySelectorAll('section');
     let currentSection = '';
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
-      const isVisible =
-        rect.top < window.innerHeight && // Parte superior está en el viewport
-        rect.bottom > 0; // Parte inferior está en el viewport
-
-      if (isVisible) {
-        currentSection = section.id; // La sección visible se considera activa
+      if (rect.top <= 100 && rect.bottom > 100) {
+        currentSection = section.id;
       }
     });
 
-    this.activeSection = currentSection;
+    if (currentSection) {
+      this.activeSection = currentSection;
+    }
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  handleMenuClick(section: string): void {
+    this.scrollToSection(section);
+    if (window.innerWidth < 1024) {
+      this.isMenuOpen = false; // Cierra el menú en mobile
+    }
+  }
+
+  @HostListener('window:resize', [])
+  onResize(): void {
+    if (window.innerWidth >= 1024) {
+      this.isMenuOpen = false; // Cierra el menú al ampliar la pantalla
+    }
   }
 }

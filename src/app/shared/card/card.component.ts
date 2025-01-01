@@ -11,4 +11,5 @@ export class CardComponent {
   @Input() cover_image!: string; // Declarar como @Input()
   @Input() title!: string; // Declarar como @Input()
   @Input() description!: string; // Declarar como @Input()
+  @Input() project!: any; // Declarar como @Input()
 }

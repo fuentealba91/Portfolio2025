@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-link {
+    @apply text-gray-400 hover:text-white transition-colors duration-300 relative flex items-center justify-center p-4 cursor-pointer;
+  }
+
+  .menu-link.active {
+    @apply text-white font-semibold;
+  }
+
+  .menu-link.active::after {
+    content: "";
+    @apply absolute bottom-[-21px] left-1/2 -translate-x-1/2 lg:w-[9px] lg:h-[9px] rounded-full bg-white;
+  }
+
+  .menu-link:hover::after {
+    content: "";
+    @apply absolute bottom-[-21px] left-1/2 -translate-x-1/2 lg:w-[9px] lg:h-[9px] rounded-full bg-gray-400;
+  }
+}
