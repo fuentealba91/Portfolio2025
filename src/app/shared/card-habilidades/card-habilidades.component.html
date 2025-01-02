@@ -1,0 +1,9 @@
+<div class="carousel-container border border-gray-400 bg-white rounded-lg" #carouselContainer>
+  <div class="carousel-track" #carouselTrack>
+    @for (skill of skills; track skill.alt) {
+      <div class="carousel-item">
+        <img [src]="skill.src" [alt]="skill.alt" />
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div
+  class="w-[30rem] mx-auto bg-gray-400 rounded-lg shadow-lg"
+>
+  <div class="flex w-full border-b-2 border-gray-500">
+    <fa-icon [icon]="selectedIcon" class="text-[#5840BA] text-2xl my-auto pl-4"></fa-icon>
+    <h3 class="p-4 text-xl font-bold text-[#5840BA]">
+      {{ estudios.length > 0 ? 'Estudios' : experiencia.length > 0 ? 'Experiencia' : 'Otro' }}
+    </h3>
+  </div>
+  <div *ngFor="let item of itemsToDisplay" class="p-4">
+    <div class="flex justify-between items-center">
+      <h5 class="font-bold text-gray-900 pr-4">{{ item.lugar }}</h5>
+      <div class="flex space-x-2">
+        <span class="px-3 py-1 text-sm font-semibold text-white bg-[#5840BA] rounded-lg">
+          {{ item.desde }}
+        </span>
+        <span class="px-3 py-1 text-sm font-semibold text-white bg-[#5840BA] rounded-lg">
+          {{ item.hasta }}
+        </span>
+      </div>
+    </div>
+    <span class="text-gray-700">{{ item.estudio }}</span>
+  </div>
+</div>

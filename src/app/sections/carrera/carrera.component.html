@@ -1,2 +1,10 @@
-<section id="carrera" appFadeIn>
+<section id="carrera" class="w-full" appFadeIn>
+    <h2>Estudios, Habilidades y Experiencia</h2>
+    <div class="w-3/4 flex space-x-4 justify-center">
+        <app-card-carrera [estudios]="estudios"></app-card-carrera>
+        <app-card-carrera [experiencia]="experiencia"></app-card-carrera>
+    </div>
+    <div class="w-3/4 pt-4 justify-center">
+        <app-card-habilidades></app-card-habilidades>
+    </div>
 </section>
