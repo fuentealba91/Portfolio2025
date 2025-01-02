@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { FadeInDirective } from '@shared/fade-in.directive';
 
 @Component({
   selector: 'app-card-carrera',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, FadeInDirective],
   templateUrl: './card-carrera.component.html',
-  styleUrls: ['./card-carrera.component.css']
+  styleUrls: ['./card-carrera.component.css'],
 })
 export class CardCarreraComponent {
   @Input() estudios: { lugar: string; estudio: string; desde: string; hasta: string }[] = [];

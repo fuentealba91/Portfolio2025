@@ -13,6 +13,8 @@ export class ProjectsComponent {
 
   ngOnInit(): void {}
 
+  cursorChar: string = '|'; // Caracter del cursor parpadeante
+
   projects = [
     {
       title: 'Project 1',

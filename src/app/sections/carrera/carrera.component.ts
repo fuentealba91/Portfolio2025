@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { FadeInDirective } from '@shared/fade-in.directive';
-import { CardCarreraComponent } from "../../shared/card-carrera/card-carrera.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { CardHabilidadesComponent } from "../../shared/card-habilidades/card-habilidades.component";
+import { CommonModule } from '@angular/common';
+import { CardCarreraComponent } from "../../shared/card-carrera/card-carrera.component";
 
 @Component({
   selector: 'app-carrera',
-  imports: [FadeInDirective, CardCarreraComponent, FontAwesomeModule, CardHabilidadesComponent],
+  imports: [FontAwesomeModule, CommonModule, CardCarreraComponent, FadeInDirective],
   templateUrl: './carrera.component.html',
-  styleUrl: './carrera.component.css'
+  styleUrl: './carrera.component.css',
 })
 export class CarreraComponent {
   constructor() {}
 
   ngOnInit(): void {}
+
+  cursorChar: string = '|'; // Caracter del cursor parpadeante
 
   estudios = [
     {

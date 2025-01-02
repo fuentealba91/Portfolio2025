@@ -1,23 +1,17 @@
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .skills {
+    @apply grid grid-cols-6 gap-3;
   }
-  .carousel-track {
-    display: flex;
-    gap: 30px;
+
+  .skill {
+    @apply flex flex-col items-center justify-center bg-white rounded-lg shadow-md p-1;
   }
-  .carousel-item {
-    flex-shrink: 0;
-    width: 150px;
-    height: 150px;
+
+  img {
+    @apply w-fit h-fit max-h-16;
   }
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s;
-  }
-  .carousel-item:hover img {
-    transform: scale(1.1);
-  }
+}

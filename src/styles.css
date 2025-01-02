@@ -9,7 +9,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-grid-pattern bg-cover bg-blend-multiply bg-[#0C0F24] bg-no-repeat bg-fixed font-mono;
+    @apply bg-grid-pattern bg-cover bg-blend-multiply bg-[#abd1c6] bg-no-repeat bg-fixed font-mono;
   }
 
   section {
@@ -17,7 +17,7 @@ html {
   }
 
   h2 {
-    @apply text-4xl font-bold text-white pb-10;
+    @apply text-4xl font-bold text-[#1d8581] pb-10;
   }
 
   h3 {
@@ -25,7 +25,7 @@ html {
   }
 
   p {
-    @apply text-white pb-5;
+    @apply text-[#0f3433] font-bold text-lg pb-5;
   }
 }
 

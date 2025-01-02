@@ -18,6 +18,6 @@
 
   .menu-link:hover::after {
     content: "";
-    @apply absolute bottom-[-21px] left-1/2 -translate-x-1/2 lg:w-[9px] lg:h-[9px] rounded-full bg-gray-400;
+    @apply absolute bottom-[-21px] left-1/2 -translate-x-1/2 lg:w-[9px] lg:h-[9px] rounded-full bg-white;
   }
 }

@@ -1,10 +1,16 @@
 <section id="carrera" class="w-full" appFadeIn>
-    <h2>Estudios, Habilidades y Experiencia</h2>
-    <div class="w-3/4 flex space-x-4 justify-center">
-        <app-card-carrera [estudios]="estudios"></app-card-carrera>
-        <app-card-carrera [experiencia]="experiencia"></app-card-carrera>
-    </div>
-    <div class="w-3/4 pt-4 justify-center">
-        <app-card-habilidades></app-card-habilidades>
-    </div>
+  <div class="flex justify-center mt-4">
+    <h2>Trayectoria()</h2>
+    <h2 class="text-white animate-blink">{{ cursorChar }}</h2>
+  </div>
+  <div
+    class="w-full flex flex-wrap justify-center lg:flex-row lg:space-x-4"
+  >
+    <app-card-carrera
+      [estudios]="estudios"
+    ></app-card-carrera>
+    <app-card-carrera
+      [experiencia]="experiencia"
+    ></app-card-carrera>
+  </div>
 </section>
