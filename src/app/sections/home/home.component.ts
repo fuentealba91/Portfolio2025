@@ -1,10 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FadeInDirective } from '@shared/fade-in.directive';
 import { gsap } from 'gsap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: 'app-home',
-  imports: [FadeInDirective],
+  imports: [ FadeInDirective, FontAwesomeModule ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
@@ -12,6 +15,9 @@ export class HomeComponent implements OnInit {
   @ViewChild('textElement', { static: true }) textElement!: ElementRef;
   @ViewChild('textElement2', { static: true }) textElement2!: ElementRef;
 
+  faFileArrowDown = faFileArrowDown; // Ícono para el botón de descarga
+  faLinkedin = faLinkedin; // Ícono para el enlace a LinkedIn
+  faGithub = faGithub; // Ícono para el enlace a GitHub
   fullText: string = 'FELIPE FUENTEALBA ILLANES'; // Primer texto
   fullText2: string = 'FULLSTACK DEVELOPER'; // Segundo texto
   cursorChar: string = '</>'; // Caracter del cursor parpadeante

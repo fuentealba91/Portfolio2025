@@ -3,7 +3,12 @@
 >
   <div class="flex justify-between items-center">
     <div class="lg:hidden text-lg font-bold">
-      <a href="#">Logo</a>
+      <a (click)="handleMenuClick('inicio')" class="cursor-pointer">
+        <img
+          src="assets/logo.png"
+          alt="Logo"
+          class="h-10 w-10 lg:h-12 lg:w-12 rounded-full"/>
+      </a>
     </div>
     <div class="lg:hidden">
       <button

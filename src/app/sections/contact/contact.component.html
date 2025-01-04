@@ -1,4 +1,78 @@
 <section id="contacto" appFadeIn>
-    <h2>Contacto</h2>
-    <p>Esta sección contiene información de contacto.</p>
+  <div class="flex justify-center mt-4">
+    <h2>Contacto()</h2>
+    <h2 class="text-white animate-blink">{{ cursorChar }}</h2>
+  </div>
+  <div class="flex items-center p-4 bg-white rounded-lg justify-around">
+    <form class="mx-auto" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="flex flex-col md:flex-row md:gap-4">
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            Nombre
+          </label>
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            [class.error]="isFieldInvalid('name')"
+            placeholder="Nombre Apellido"
+          />
+          <div *ngIf="isFieldInvalid('name')" class="error-message">
+            {{ getErrorName('name') }}
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1">
+            Correo
+          </label>
+          <input
+            type="email"
+            formControlName="email"
+            class="form-control"
+            [class.error]="isFieldInvalid('email')"
+            placeholder="correo@correo.com"
+          />
+          <div *ngIf="isFieldInvalid('email')" class="error-message">
+            {{ getErrorEmail('email') }}
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-gray-700 mb-1">
+          Asunto
+        </label>
+        <input
+          type="text"
+          formControlName="subject"
+          class="form-control"
+          [class.error]="isFieldInvalid('subject')"
+          placeholder="Asunto"
+        />
+        <div *ngIf="isFieldInvalid('subject')" class="error-message">
+          {{ getErrorAsunto('subject') }}
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+        <textarea
+          formControlName="message"
+          class="form-control"
+          [class.error]="isFieldInvalid('message')"
+          rows="4"
+          placeholder="Escribe tu mensaje aquí..."
+        ></textarea>
+        <div *ngIf="isFieldInvalid('message')" class="error-message">
+          {{ getErrorMessage('message') }}
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-full">
+        <fa-icon [icon]="faEnvelope"></fa-icon>
+        {{ submitted ? "Enviando..." : "Enviar" }}
+      </button>
+    </form>
+  </div>
 </section>

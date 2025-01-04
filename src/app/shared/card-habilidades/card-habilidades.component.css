@@ -8,10 +8,15 @@
   }
 
   .skill {
-    @apply flex flex-col items-center justify-center bg-white rounded-lg shadow-md p-1;
+    @apply flex flex-col items-center justify-center bg-white rounded-lg shadow-md p-1 overflow-hidden;
   }
 
-  img {
-    @apply w-fit h-fit max-h-16;
+  .skill img {
+    @apply w-fit h-fit max-h-16 transform transition-transform duration-1000 ease-in-out;
+    transform: rotate(0deg); /* Estado inicial */
+  }
+
+  .skill:hover img {
+    transform: rotate(360deg); /* Giro completo al hacer hover */
   }
 }

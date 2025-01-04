@@ -31,6 +31,9 @@ module.exports = {
         slideInFromLeft: 'slideInFromLeft 0.5s ease-out',
         slideInFromRight: 'slideInFromRight 0.5s ease-out',
       },
+      rotate: {
+        360: '360deg', // Agrega la rotación completa
+      },
     },
   },
   plugins: [],

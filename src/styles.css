@@ -29,6 +29,33 @@ html {
   }
 }
 
+@layer components {
+  .btn-primary {
+    @apply bg-[#f9bc60] text-white font-semibold py-2 px-4 rounded-full text-lg cursor-pointer;
+  }
+
+  .btn-primary:hover {
+    @apply bg-[#f7b149] text-white font-semibold py-2 px-4 rounded-full text-lg cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-[#f9bc60] text-[#f9bc60] font-semibold py-2 px-4 rounded-full text-lg;
+  }
+
+  
+  .error-message {
+    @apply text-red-600 text-sm;
+  }
+
+  .form-control {
+    @apply w-full p-3 border border-gray-300 rounded-md text-base transition-colors duration-150 ease-in-out focus:outline-none focus:border-indigo-600 focus:ring-4 focus:ring-indigo-100;
+  }
+
+  .form-control.error {
+    @apply border-red-600;
+  }
+}
+
 .fade-in {
   opacity: 0;
   transition: opacity 0.6s ease-in;
