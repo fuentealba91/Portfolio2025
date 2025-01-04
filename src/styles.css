@@ -8,9 +8,12 @@ html {
 }
 
 @layer base {
-  body {
+  /* body {
     @apply bg-grid-pattern bg-cover bg-blend-multiply bg-[#abd1c6] bg-no-repeat bg-fixed font-mono;
-  }
+  } */
+   body {
+    @apply font-mono;
+   }
 
   section {
     @apply w-full min-h-screen pb-44 flex flex-col items-center pt-24 md:pt-44;

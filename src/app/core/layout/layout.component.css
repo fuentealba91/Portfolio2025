@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+.grid {
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.box-border {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.5s ease-in-out; /* Transición suave de los colores */
+}
+
+.relative {
+  position: relative;
+}
+
+.overflow-auto {
+  overflow-y: auto; /* Permite desplazamiento del contenido */
+}
+
+/* Colores personalizados */
+.bg-green-300 {
+  background-color: #d1fae5; /* Verde claro */
+}
+
+.bg-green-500 {
+  background-color: #abd1c6; /* Verde oscuro */
+}

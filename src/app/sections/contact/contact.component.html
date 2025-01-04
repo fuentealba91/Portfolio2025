@@ -4,7 +4,7 @@
     <h2 class="text-white animate-blink">{{ cursorChar }}</h2>
   </div>
   <div class="flex w-[22rem] md:w-fit items-center p-4 bg-white rounded-lg justify-around">
-    <form class="mx-auto" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form class="mx-auto pointer-events-auto" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="flex flex-col md:flex-row md:gap-4">
         <div class="mb-4">
           <label class="block text-sm font-medium text-gray-700 mb-1">
