@@ -1,4 +1,10 @@
-<div class="w-full h-96 bg-[#161A31] border-2 border-gray-400 rounded-xl group overflow-hidden relative" appFadeIn>
+<a
+  [href]="project.github"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="block max-w-96  w-[22rem] md:w-full h-72 bg-[#161A31] border-2 border-gray-400 rounded-xl group overflow-hidden relative"
+  appFadeIn
+>
   <!-- Imagen de fondo -->
   <img
     class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-300"
@@ -9,7 +15,20 @@
   <div
     class="absolute inset-0 flex flex-col justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300"
   >
-    <h3 class="text-3xl font-semibold text-white">{{ title }}</h3>
-    <p class="text-lg text-gray-300 mt-4">{{ description }}</p>
+    <h4 class="text-3xl font-semibold text-white">{{ title }}</h4>
+    <div class="flex flex-wrap gap-2 mt-4">
+      <div
+        *ngFor="let tech of project.technologies"
+        class="flex items-center gap-1"
+      >
+        <img
+          *ngIf="getSkillLogo(tech)"
+          [src]="getSkillLogo(tech)?.src"
+          [alt]="getSkillLogo(tech)?.alt"
+          class="w-6 h-fit"
+        />
+        <span class="text-white text-sm">{{ tech }}</span>
+      </div>
+    </div>
   </div>
-</div>
+</a>
