@@ -10,7 +10,7 @@ import { LayoutComponent } from "./core/layout/layout.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, ProjectsComponent, HomeComponent, ContactComponent, AboutComponent, CarreraComponent, LayoutComponent],
+  imports: [NavbarComponent, ProjectsComponent, HomeComponent, ContactComponent, AboutComponent, CarreraComponent, LayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   encapsulation: ViewEncapsulation.None
