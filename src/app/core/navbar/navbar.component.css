@@ -4,7 +4,7 @@
 
 @layer components {
   .menu-link {
-    @apply text-gray-400 hover:text-white transition-colors duration-300 relative flex items-center justify-center p-4 cursor-pointer;
+    @apply text-gray-400 hover:text-white transition-colors duration-300 relative flex items-center justify-center p-4 cursor-pointer font-mono;
   }
 
   .menu-link.active {
